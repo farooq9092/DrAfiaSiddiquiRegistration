@@ -43,7 +43,7 @@ def save_data(name, phone, email, cnic, province, district, education):
         writer.writerow([name, phone, email, cnic, province, district, education])
 
 def main():
-    st.title("Dr. Afia Siddiqui Movement Registration")
+    st.title("Dr. Afia Siddiqui Movement Registration Form")
     st.markdown("ڈاکٹر عافیہ صدیقی کی رہائی کے لیے تحریک")
     
     # Add your image file name in the background image URL
