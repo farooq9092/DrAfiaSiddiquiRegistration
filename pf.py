@@ -63,7 +63,7 @@ def main():
     phone = form_container.text_input("Phone")
     email = form_container.text_input("Email")
     cnic = form_container.text_input("CNIC")
-    province = form_container.selectbox("Province", ["Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan", "Gilgit-Baltistan"])
+    province = form_container.selectbox("Province", ["Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan", "Gilgit-Baltistan", "Kashmir"])
     
     # Add district options based on the selected province
     if province == "Punjab":
@@ -76,6 +76,8 @@ def main():
         district = form_container.selectbox("District", ["Quetta", "Gwadar", "Khuzdar", "Turbat"])
     elif province == "Gilgit-Baltistan":
         district = form_container.selectbox("District", ["Gilgit", "Skardu", "Ghizer", "Hunza"])
+    elif province == "Kashmir":
+        district = form_container.selectbox("District", ["Muzaffarabad", "Mirpur", "Kotli", "Rawlakot"])
     
     education = form_container.selectbox("Education", ["Primary", "Metric", "Intermediate", "Bachelor", "Master", "Ph.D.", "Other"])
     
