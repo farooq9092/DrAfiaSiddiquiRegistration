@@ -82,15 +82,17 @@ def main():
     if form_container.button("Submit"):
         if not name or not phone or not email or not cnic or not province or not district or not education:
             form_container.error("Please fill in all fields.")
-        elif not check_cnic_exists(cnic):
-            save_data(name, phone, email, cnic, province, district, education)
-            form_container.success("Registration successful!")
         else:
-            form_container.error("CNIC already registered.")
+            if not check_cnic_exists(cnic):
+                save_data(name, phone, email, cnic, province, district, education)
+                form_container.success("Registration successful!")
+            else:
+                form_container.error("CNIC already registered.")
 
 def check_cnic_exists(cnic):
     with open("registration_data.csv", "r") as file:
         reader = csv.reader(file)
+        next(reader)  # Skip the header row
         for row in reader:
             if row and row[3] == cnic:  # Assuming CNIC is at index 3 in the CSV row
                 return True
