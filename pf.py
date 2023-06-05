@@ -90,12 +90,11 @@ def main():
 
 def check_cnic_exists(cnic):
     with open("registration_data.csv", "r") as file:
-        reader = csv.DictReader(file)
+        reader = csv.reader(file)
         for row in reader:
-            if "CNIC" in row and row["CNIC"] == cnic:
+            if row and row[3] == cnic:  # Assuming CNIC is at index 3 in the CSV row
                 return True
         return False
 
 if __name__ == "__main__":
     main()
-
