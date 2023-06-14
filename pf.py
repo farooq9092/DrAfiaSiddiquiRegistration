@@ -1,5 +1,9 @@
 import csv
 import streamlit as st
+import resource
+
+# Set the watch limit to 1000
+resource.setrlimit(resource.RLIMIT_NOFILE, (1000, resource.RLIM_INFINITY))
 
 # Set page config to wide layout
 st.set_page_config(layout="wide")
