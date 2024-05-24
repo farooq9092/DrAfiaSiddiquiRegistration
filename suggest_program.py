@@ -127,19 +127,19 @@ def main():
 
         st.header("Career Suggestions:")
 
-        if computer_percentage > 80:
+        if computer_percentage >=70:
             st.markdown('<p class="suggestion">Welcome to Computer Science, Information Technology, Artificial Intelligence, Cyber Security!</p>', unsafe_allow_html=True)
 
-        if english_percentage > 80:
+        if english_percentage >=80:
             st.markdown('<p class="suggestion">You may consider pursuing BS English.</p>', unsafe_allow_html=True)
 
-        if math_percentage > 80:
+        if math_percentage >=80:
             st.markdown('<p class="suggestion">You may consider pursuing Data Science and Artificial Intelligence.</p>', unsafe_allow_html=True)
 
         if biology_percentage >= 90:
             st.markdown('<p class="suggestion">You may consider pursuing Medical (MBBS).</p>', unsafe_allow_html=True)
 
-        if (math_percentage > 80 and calculate_percentage(metric_chemistry + intermediate_chemistry, 200) > 80):
+        if (math_percentage >=75 and calculate_percentage(metric_chemistry + intermediate_chemistry, 200) > 80):
             st.markdown('<p class="suggestion">You may consider pursuing Engineering.</p>', unsafe_allow_html=True)
 
     if st.button("Clear"):
