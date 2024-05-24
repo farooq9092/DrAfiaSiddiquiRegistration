@@ -136,7 +136,7 @@ def main():
         if math_percentage > 80:
             st.markdown('<p class="suggestion">You may consider pursuing Data Science and Artificial Intelligence.</p>', unsafe_allow_html=True)
 
-        if biology_percentage > 90:
+        if biology_percentage >= 90:
             st.markdown('<p class="suggestion">You may consider pursuing Medical (MBBS).</p>', unsafe_allow_html=True)
 
         if (math_percentage > 80 and calculate_percentage(metric_chemistry + intermediate_chemistry, 200) > 80):
