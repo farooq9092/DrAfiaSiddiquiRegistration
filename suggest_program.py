@@ -145,7 +145,7 @@ def main():
     if st.button("Clear"):
         reset_form()
 
-    st.markdown('<div class="footer">The Youth Of Seet Pur</div>', unsafe_allow_html=True)
+    st.markdown('<div class="footer">نوجوانان سیت پور</div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
