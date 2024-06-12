@@ -23,7 +23,7 @@ def main():
         """
         <style>
         .main-title {
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Header background color */
             color: white;
             padding: 10px;
             text-align: center;
@@ -33,7 +33,7 @@ def main():
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: #4CAF50;
+            background-color: #f44336; /* Footer background color */
             color: white;
             text-align: center;
             padding: 10px;
