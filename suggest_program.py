@@ -97,7 +97,7 @@ def main():
         unsafe_allow_html=True
     )
 
-    st.markdown('<h1 class="main-title">**Mark2Career: Your Personalized Pathway to Success**</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-title">Mark2Career: Your Personalized Pathway to Success</h1>', unsafe_allow_html=True)
     
     visitor_count = increment_visitor_count()
     st.markdown(f'<div class="visitor-counter">Total Visitors: {visitor_count}</div>', unsafe_allow_html=True)
