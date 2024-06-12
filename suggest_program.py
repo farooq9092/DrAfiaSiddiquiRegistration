@@ -22,21 +22,42 @@ def main():
     st.markdown(
         """
         <style>
+        body {
+            background-image: url('CC.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         .main-title {
-            background-color: #4CAF50; /* Header background color */
+            background: linear-gradient(90deg, #4CAF50, #8BC34A); /* Header gradient color */
             color: white;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
+            font-size: 24px;
+            border-radius: 5px;
+        }
+        .mission-statement {
+            background: #f5f5f5; /* Light grey background */
+            border-left: 5px solid #4CAF50; /* Matching left border */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .mission-statement h2 {
+            color: #4CAF50; /* Matching color for the title */
         }
         .footer {
             position: fixed;
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: #f44336; /* Footer background color */
+            background: linear-gradient(90deg, #8BC34A, #4CAF50); /* Footer gradient color */
             color: white;
             text-align: center;
             padding: 10px;
+            font-size: 16px;
+            border-radius: 5px 5px 0 0;
         }
         .suggestion {
             color: #FF5733;
@@ -65,6 +86,11 @@ def main():
         .social-icons img {
             width: 32px;
             height: 32px;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .social-icons img:hover {
+            transform: scale(1.1);
         }
         </style>
         """,
@@ -80,8 +106,18 @@ def main():
         """
         <div class="social-icons">
             <a href="https://www.youtube.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube"></a>
-            <a href="https://www.facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            <a href="https://www.facebook.com/groups/1913020075811796" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
             <a href="https://www.instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="mission-statement">
+            <h2>Mission Statement</h2>
+            <p>At Youth for Seetpur, our mission is to empower, uplift, and transform our community by fostering a culture of education, social responsibility, and environmental stewardship. We are committed to helping students gain access to quality education, supporting social welfare initiatives, and promoting sustainable practices to ensure a clean and healthy environment. Our purpose is to build a well-educated, cohesive, and vibrant Union Council Seetpur where every individual has the opportunity to thrive and contribute to the community's growth and prosperity. Through collaboration, dedication, and innovative solutions, we strive to create a brighter future for all residents of Seetpur.</p>
         </div>
         """,
         unsafe_allow_html=True
@@ -170,7 +206,8 @@ def main():
     if st.button("Clear"):
         reset_form()
 
-    st.markdown('<div class="footer">نوجوانان سیت پور03027499092 </div>', unsafe_allow_html=True)
+    st.markdown('<div class="footer">نوجوانان سیت پور</div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
+
